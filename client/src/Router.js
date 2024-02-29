@@ -142,8 +142,6 @@ function AppRouter() {
     const requestSpotifyToken = async() => {
       try{
         delete axios.defaults.headers.common["Authorization"];
-        console.log(clientId);
-        console.log(clientSecret);
         const response = await axios.post(
           'https://accounts.spotify.com/api/token',
           { 
