@@ -1,0 +1,17 @@
+{
+    "name": "Spotify-forum-v2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./server/server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "cd ./server && node server.js",
+      "build": "cd ./server && npm i"
+    },
+    "engines": {
+      "node": "20.x"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
