@@ -36,6 +36,8 @@ function AppRouter() {
 
   /**Backend start */
     const URL = process.env.REACT_APP_SERVER_URL;
+    const clientId = process.env.REACT_APP_CLIENT_ID;
+    const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
     const [token, setToken] = useState(JSON.parse(localStorage.getItem("tokenUser")));
     const [isAdmin, setAdmin] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -140,12 +142,14 @@ function AppRouter() {
     const requestSpotifyToken = async() => {
       try{
         delete axios.defaults.headers.common["Authorization"];
+        console.log(clientId);
+        console.log(clientSecret);
         const response = await axios.post(
           'https://accounts.spotify.com/api/token',
           { 
             grant_type: 'client_credentials', 
-            client_id: process.env.REACT_APP_CLIENT_ID,
-            client_secret: process.env.REACT_APP_CLIENT_SECRET
+            client_id: clientId,
+            client_secret: clientSecret,
           }, 
           {
             headers: {
