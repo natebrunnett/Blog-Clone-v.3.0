@@ -4,7 +4,7 @@ import {useState} from 'react';
 import spotifyImage from '../media/spotify.jpg'
 import { useNavigate } from "react-router-dom";
 
-function HomePage({spotifyToken, testImages, writePost, renderPost, feed, payload, setPayload}) {
+function HomePage({spotifyToken, writePost, renderPost, feed, payload, setPayload}) {
 
   const [testList, setList] = useState([]);
   const [searchInput, setInput] = useState('');
@@ -59,17 +59,6 @@ function HomePage({spotifyToken, testImages, writePost, renderPost, feed, payloa
           </div>
         </div>
       </div>
-        <div className="scrollViewItems">
-          {testImages.map((data, idx)=> {
-            return(
-              <div 
-                className="scrollViewItem"
-                style={{backgroundImage: `url(${data})`}}
-                key={idx}
-              ></div>
-            )
-          })}
-        </div>
       
 
       <div className="SearchWrapper">

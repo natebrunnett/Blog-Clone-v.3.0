@@ -10,12 +10,6 @@ import HomePage from './components/HomePage'
 import Profile from "./components/Profile"
 import Footer from "./components/Footer"
 import image1 from './media/spotifyTest1.jpg'
-import image2 from './media/spotifyTest2.jpg'
-import image3 from './media/spotifyTest3.jpg'
-import image4 from './media/spotifyTest4.jpeg'
-import image5 from './media/spotifyTest5.jpeg'
-import image6 from './media/spotifyTest6.jpeg'
-import image7 from './media/spotifyTest7.jpeg'
 
 //*Backend start*/
 import AdminDashboard from './components/AdminDashboard'
@@ -157,12 +151,6 @@ function AppRouter() {
         )
         console.log(response.data.access_token);
         setSpotifyToken(response.data.access_token);
-        setImages(
-        [
-          image1, image2, image3, image4, image5, image6, image7,
-          image1, image2, image3, image4, image5, image6, image7,
-          image1, image2, image3, image4, image5, image6, image7
-        ]);
       } catch(e){
         console.log(e)
     }
@@ -285,6 +273,7 @@ function AppRouter() {
           element={<HomePage
             spotifyToken={spotifyToken}
             testImages={testImages}
+            transitionTime={3000}
             writePost={writePost}
             renderPost={renderPost}
             user={user}

@@ -389,3 +389,21 @@ body {
   width: 400px;
   background-size: cover;
 }
+
+.slideshow-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity ease-in-out 0.8s; /* Adjust transition duration as needed */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+}
