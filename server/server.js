@@ -11,7 +11,7 @@ const cors = require('cors');
 app.use(cors())
 
 require('dotenv').config({path : './.env'});
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4040;
 
 async function connecting(){
     try {

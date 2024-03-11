@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import AppRouter from './Router.js'
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AppRouter 
-    />
+    <App />
 );
 
